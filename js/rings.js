@@ -2,24 +2,6 @@
   //Behaviours are manually set by user click to increase/ click to reduce
   //behaviours values effect rate of change of feelings
   //does learning = effectiveness? remove effectiveness? yes, because effectiveness is not only based on learning? some bhaviours learning directly effect learning but not necessarily feelings
-  var effect = [ 
-  { "nv":"Suspicion", "pv":"Trust","val":0, 
-    "cause":{"Closeness":3, "Openness":3, "Listening":3 }},
-  { "nv":"Fear", "pv":"Courage","val":0,
-    "cause":{"Group Reflection":3, "Success stories":3}},
-  { "nv":"Frustration", "pv":"Fellowship","val":0,
-    "cause":{"Appreciation":3, "Vulnerability":3}},
-  { "nv":"Us and Them", "pv":"How can we help?","val":0, "purpose":true}];
-
-  var cause = [
-  { "nv":"Separation", "pv":"Closeness", "val":-30},
-  { "nv":"Concealment", "pv":"Openness", "val":-30},
-  { "nv":"Ignoring", "pv":"Listening", "val":-30},
-  { "nv":"Blame", "pv":"Group Reflection","val":-30},
-  { "nv":"Scare stories", "pv":"Success stories", "val":-30},
-  { "nv":"Punishment", "pv":"Appreciation", "val":-30},
-  { "nv":"Defensiveness", "pv":"Vulnerability", "val":-30}]
-
   var fps = 20;
   var clickInterval;
 
@@ -30,38 +12,16 @@
     });
 
     setInterval(function(){
-      redraw();
-      applyChanges();
+  $('.rings').each(function(i,o){
+      redraw(o);
+  });
     }, 1000/fps);
     
-    function applyChanges()
-    {
-      $.each(effect, function(i,e){
-        if(e.purpose)
-          e.val = d3.mean(effect, function(e){ return e.val; });
-        else
-        {
-          e.val += calculateChange(e);
-          if(e.val > 100) { e.val = 100; }
-          if(e.val < -100) { e.val = -100; }
-        }
-      });
-    }
-
-    function calculateChange(effect){
-      var change = 0;
-      $.each(effect.cause, function(ec,weight){ 
-        $.each(cause, function(i,c){
-          if(c.pv == ec)
-            change += c.val * weight;
-        });
-      });
-      return (change /(cause.length *50)) - ((effect.val^2)/(100^2));
-    }
-
-    function redraw(){
+    function redraw(o){
       var datum = {"x":350, "y":300};
-      var svg = d3.select("svg");
+      var svg = d3.select(o);
+      var effect = $(o).data('effect')
+      var cause = $(o).data('cause')
       var causeAngle = (2.0*Math.PI)/cause.length;
       var effectAngle = (2.0*Math.PI)/(effect.length-1);
       
@@ -112,6 +72,27 @@
         .on('mousedown', adjustCause)
         .on('touchstart', adjustCause);
 
+      $.each(effect, function(i,e){
+        if(e.purpose)
+          e.val = d3.mean(effect, function(e){ return e.val; });
+        else
+        {
+          e.val += calculateChange(e);
+          if(e.val > 100) { e.val = 100; }
+          if(e.val < -100) { e.val = -100; }
+        }
+      });
+    function calculateChange(effect){
+      var change = 0;
+      $.each(effect.cause, function(ec,weight){ 
+	$.each(cause, function(i,c){
+	  if(c.pv == ec)
+	    change += c.val * weight;
+	});
+      });
+      return (change /(cause.length *50)) - ((effect.val^2)/(100^2));
+    }
+
       function causeX(d,i){
         return datum.x + (250 * Math.cos(i*causeAngle));
       }
@@ -139,6 +120,5 @@
           d3.event.preventDefault();
       }
     }
-
   });
 })(Window, jQuery);

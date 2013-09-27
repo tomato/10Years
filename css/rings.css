@@ -1,0 +1,46 @@
+
+  /*Rings styles */
+
+      svg {
+        width: 800px;
+        height: 600px;
+        margin: 0 auto;
+        display: block;
+	font-size: 14px;
+      }
+      text, circle {
+        cursor: default;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .effect {
+        fill: white;
+        stroke: grey;
+      }
+      .effect-text {
+        text-anchor: middle;
+        font-family:'Helvetica Neue', Arial, sans-serif;
+      }
+      .purpose {
+        fill: #FAF8CC;
+      }
+      .negative-text {
+        fill: red;
+      }
+      .positive-text {
+        fill: green;
+      }
+      .cause {
+        fill: white;
+        stroke: orange;
+        cursor: pointer;
+      }
+      .cause-text {
+        text-anchor: middle;
+        font-family:'Helvetica Neue', Arial, sans-serif;
+        cursor: pointer;
+      }
