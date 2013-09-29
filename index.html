@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<title>What could you do with 10 years of continuous improvement?</title>
+<head>
+  <title>What could you do with 10 years of continuous improvement?</title>
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/sky.css" id="theme">
+  <link href='css/rings.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>What could you do with 10 years of continuous improvement?</h2>
+        <footer>by Tom Howlett <br/>@diaryofscrum <br/>tom@tomhowlett.com</footer>
+      </section>
 
-<section>
-    <h1>What could you do with 10 years of continuous improvement?</h1>
-    <footer>by Tom Howlett <br/>@diaryofscrum <br/>tom@tomhowlett.com</footer>
-</section>
+      <!--
+      -->
+      <section>
+        <h3>Who?</h3> 
+        <ul>
+          <li>12 Years at Biomni
+          <li>We build a product that lets people request IT services??
+          <li>I've been blogging about for 5 years at Diary of a Scrummaster
+        </ul>
+      </section>
+      <section>
+        <svg class="rings" data-effect='[ 
+          { "nv":"Suspicion", "pv":"Trust","val":0, 
+          "cause":{"Closeness":3, "Openness":3, "Listening":3 }},
+          { "nv":"Fear", "pv":"Courage","val":0,
+          "cause":{"Group Reflection":3, "Success stories":3}},
+          { "nv":"Frustration", "pv":"Fellowship","val":0,
+          "cause":{"Appreciation":3, "Vulnerability":3}},
+          { "nv":"Us and Them", "pv":"How can we help?","val":0, "purpose":true}]'
+          data-cause='[
+          { "nv":"Separation", "pv":"Closeness", "val":-30},
+          { "nv":"Concealment", "pv":"Openness", "val":-30},
+          { "nv":"Ignoring", "pv":"Listening", "val":-30},
+          { "nv":"Blame", "pv":"Group Reflection","val":-30},
+          { "nv":"Scare stories", "pv":"Success stories", "val":-30},
+          { "nv":"Punishment", "pv":"Appreciation", "val":-30},
+          { "nv":"Defensiveness", "pv":"Vulnerability", "val":-30}]' >
+        </svg>
+      </section>
 
-<!--
--->
-<section>
-  <h3>Who?</h3> 
-  <ul>
-    <li>12 Years at Biomni
-    <li>We build a product that lets people request IT services??
-    <li>I've been blogging about for 5 years at Diary of a Scrummaster
-  </ul>
-</section>
-<section>
-<svg class="rings" data-effect='[ 
-  { "nv":"Suspicion", "pv":"Trust","val":0, 
-    "cause":{"Closeness":3, "Openness":3, "Listening":3 }},
-  { "nv":"Fear", "pv":"Courage","val":0,
-    "cause":{"Group Reflection":3, "Success stories":3}},
-  { "nv":"Frustration", "pv":"Fellowship","val":0,
-    "cause":{"Appreciation":3, "Vulnerability":3}},
-  { "nv":"Us and Them", "pv":"How can we help?","val":0, "purpose":true}]'
-    data-cause='[
-  { "nv":"Separation", "pv":"Closeness", "val":-30},
-  { "nv":"Concealment", "pv":"Openness", "val":-30},
-  { "nv":"Ignoring", "pv":"Listening", "val":-30},
-  { "nv":"Blame", "pv":"Group Reflection","val":-30},
-  { "nv":"Scare stories", "pv":"Success stories", "val":-30},
-  { "nv":"Punishment", "pv":"Appreciation", "val":-30},
-  { "nv":"Defensiveness", "pv":"Vulnerability", "val":-30}]' >
-</svg>
-</section>
-
-<section>
-<svg class="rings" data-effect='[ 
-  { "nv":"smell bad", "pv":"Smell Good","val":0, 
-    "cause":{"Closeness":3, "Openness":3, "Listening":3 }},
-  { "nv":"Fear", "pv":"Courage","val":0,
-    "cause":{"Group Reflection":3, "Success stories":3}},
-  { "nv":"Frustration", "pv":"Fellowship","val":0,
-    "cause":{"Appreciation":3, "Vulnerability":3}},
-  { "nv":"Us and Them", "pv":"How can we help?","val":0, "purpose":true}]'
-    data-cause='[
-  { "nv":"Separation", "pv":"Closeness", "val":-30},
-  { "nv":"Concealment", "pv":"Openness", "val":-30},
-  { "nv":"Ignoring", "pv":"Listening", "val":-30},
-  { "nv":"Blame", "pv":"Group Reflection","val":-30},
-  { "nv":"Scare stories", "pv":"Success stories", "val":-30},
-  { "nv":"Punishment", "pv":"Appreciation", "val":-30},
-  { "nv":"Defensiveness", "pv":"Vulnerability", "val":-30}]' >
-</svg>
-</section>
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
-<link href='css/dz.css' rel='stylesheet'>
-<link href='css/rings.css' rel='stylesheet'>
-<script src="js/jquery.min.js"></script>
-<script src="js/d3.v3.min.js"></script>
-<script src="js/rings.js"> </script>
-<script src="js/dz.js"> </script>
-<div id="progress-bar"></div>
+      <section>
+        <svg class="rings" data-effect='[ 
+          { "nv":"smell bad", "pv":"Smell Good","val":0, 
+          "cause":{"Closeness":3, "Openness":3, "Listening":3 }},
+          { "nv":"Fear", "pv":"Courage","val":0,
+          "cause":{"Group Reflection":3, "Success stories":3}},
+          { "nv":"Frustration", "pv":"Fellowship","val":0,
+          "cause":{"Appreciation":3, "Vulnerability":3}},
+          { "nv":"Us and Them", "pv":"How can we help?","val":0, "purpose":true}]'
+          data-cause='[
+          { "nv":"Separation", "pv":"Closeness", "val":-30},
+          { "nv":"Concealment", "pv":"Openness", "val":-30},
+          { "nv":"Ignoring", "pv":"Listening", "val":-30},
+          { "nv":"Blame", "pv":"Group Reflection","val":-30},
+          { "nv":"Scare stories", "pv":"Success stories", "val":-30},
+          { "nv":"Punishment", "pv":"Appreciation", "val":-30},
+          { "nv":"Defensiveness", "pv":"Vulnerability", "val":-30}]' >
+        </svg>
+      </section>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/rings.js"> </script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script>
+    Reveal.initialize();
+  </script>
+</body>
 

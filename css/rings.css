@@ -19,6 +19,7 @@
       }
       .effect {
         fill: white;
+        fill-opacity:0;
         stroke: grey;
       }
       .effect-text {
@@ -36,6 +37,7 @@
       }
       .cause {
         fill: white;
+        fill-opacity:0;
         stroke: orange;
         cursor: pointer;
       }
