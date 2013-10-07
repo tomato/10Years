@@ -12,10 +12,10 @@
     });
 
     setInterval(function(){
-  $('.rings').each(function(i,o){
-      redraw(o);
-  });
-    }, 1000/fps);
+      $('.rings').each(function(i,o){
+        redraw(o);
+        });
+      }, 1000/fps);
     
     function redraw(o){
       var datum = {"x":350, "y":300};
@@ -94,21 +94,21 @@
     }
 
       function causeX(d,i){
-        return datum.x + (250 * Math.cos(i*causeAngle));
+        return datum.x + (250 * Math.cos(i*causeAngle - 0.5*Math.PI));
       }
 
       function causeY(d,i){
-        return datum.y + (250 * Math.sin(i*causeAngle)); 
+        return datum.y + (250 * Math.sin(i*causeAngle - 0.5*Math.PI)); 
       }
 
       function effectX(d,i){
         if(d.purpose){ return datum.x; }
-        return datum.x + (125 * Math.cos(i*effectAngle));
+        return datum.x + (125 * Math.cos(i*effectAngle - 0.5*Math.PI));
       }
 
       function effectY(d,i){
         if(d.purpose){ return datum.y; }
-        return datum.y + (125 * Math.sin(i*effectAngle)); 
+        return datum.y + (125 * Math.sin(i*effectAngle - 0.5*Math.PI)); 
       }
 
       function adjustCause(d){
