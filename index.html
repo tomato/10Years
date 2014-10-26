@@ -5,146 +5,72 @@
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/moon.css" id="theme">
   <link href='css/rings.css' rel='stylesheet'>
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
       <section>
         <h2>What Could You Do With 10 Years Of Continuous Improvement?</h2>
-        <footer>by Tom Howlett <br/>@diaryofscrum <br/>tom@tomhowlett.com</footer>
+        <footer>by Tom Howlett <br/>@diaryofscrum <br/>www.leantomato.com</footer>
       </section>
 
-      <!--
-      -->
       <section>
-        <h3>Who Am I?</h3> 
-        <ul>
-          <li>I've spent 12 Years working on the development team at Biomni
-          <li>Our product Front Office is an "IT Services Interface"
-          <li>I've been blogging about my experiences for 5 years at "Diary of a Scrummaster"
-        </ul>
-        <img src="images/FrontOffice.jpg"/> 
-      </section>
-      <section>
-        <h2>Where Did We Start?</h2>
-        <ul>
-          <li>"Just go and build it"
-          <li> Worked alone 
-          <li> Each dev assigned features, took weeks to months 
-          <li> Worked from documents
-          <li> Shallow code reviews
-          <li> Long Test Periods, QA dept at opposite end of office
-        </ul>
-        <h3> Lateness, Boredom, Frustration, Shrinking team</h3>
-    </section>
-    <section>
-      <h2>2003-2007: The Beginning</h2>
-        <ul>
-          <li> Team Lead leaves - less Command and Control
-          <li> Starting to collaborate, but coding alone
-          <li> More conscious of importance of quality
-          <li> Continuous Integration
-          <li> Unit testing - well we tried
-        </ul>
-        <h3> Lateness, Learning, Frustration, Shrinking team</h3>
-     </section>
-     <section>
-       <h2> 2008-2011: Scrum</h2>
-       <ul>
-         <li> Autonomy! Self actualisation
-         <li> limiting WIP with a 3 week sprint
-         <li> Collaboration within the team - Daily standup, increasing amounts of pairing
-         <li> Reflection - Regular retrospectives and standups
-         <li> Predictable - Delivered on time 
-         <li> Problems: testing overrun, buglog, limited creativity?
-       </ul>
-        <h3> Deliver within 4 weeks, Learning, Self Actualisation, What Next?</h3>
-     </section>
-    <section>
-      <h2>2011- Using Kanban to Improve</h2>
-        <ul>
-          <li> Abandoned fixed length sprint
-          <li> Set Coding WIP at 10 where it has roughly stayed - frequently hit
-          <li> Measured lead time - particularly around defects 
-          <li> Focus on keeping work flowing
-          <li> Dropped estimation unless asked for
-          <li> QA &amp; Devs work more closely
-          <li> Allowed changes to backlog at any time
-          <li> More collaboration outside team
-       </ul>
-        <h3> Deliver within 2 weeks, Learning, Creativity, Wider Collaboration, less Us and Them</h3>
-    </section>
-      <section>
-        <h3>Kanban Method?<h3/>
+        <h3>What Changed?<h3/>
         <svg class="rings" data-effect='[ 
-          { "nv":"Suspicion", "pv":"Visualisation","val":0, 
-          "cause":{"Work Together":9}},
-          { "nv":"Overloaded", "pv":"Small WIP","val":0,
-          "cause":{"Pull Work":5, "Pairing":2, "Have Conversations":2}},
-          { "nv":"Frustration", "pv":"Flow","val":0,
-          "cause":{"Have Conversations":3, "Test all the time":3, "Fix bugs":3}},
-          { "nv":"Blind", "pv":"Feedback Loops","val":0,
-          "cause":{"Have Conversations":3, "Pairing":3,"Test all the time":3}},
-          { "nv":"Ad-hoc", "pv":"Explicit Policies","val":0,
-          "cause":{"Reflect":9}},
+          { "nv":"Frustrated", "pv":"Positive","val":0, 
+          "cause":{"Pair":2,"Listen":2,"Time to Reflect":3,"Spontaneous Dialogue":2 }},
+          { "nv":"Defensive", "pv":"Open","val":0,
+          "cause":{"Pair":3,"Listen":2,"Always Testing":2,"Spontaneous Dialogue":2 }},
+          { "nv":"Blaming", "pv":"Supporting","val":0,
+          "cause":{"Pair":2,"Pull Work":2,"Listen":2,"Time to Reflect":2,"Always Testing":1 }},
+          { "nv":"Blind", "pv":"Enquiring","val":0,
+          "cause":{"Pair":2,"Pull Work":2,"Listen":2,"Time to Reflect":1,"Always Testing":1,"Spontaneous Dialogue":1 }},
+          { "nv":"Work In Bubble", "pv":"Collaborate","val":0,
+          "cause":{"Pair":2,"Pull Work":2,"Listen":2,"Time to Reflect":1,"Always Testing":1,"Spontaneous Dialogue":1 }},
           { "nv":"Stagnation", "pv":"Continous Improvement","val":0, "purpose":true}]'
           data-cause='[
-          { "nv":"Work Alone", "pv":"Work Together", "val":-30},
+          { "nv":"Work Alone", "pv":"Pair", "val":-30},
           { "nv":"Assigned Work", "pv":"Pull Work", "val":-30},
-          { "nv":"Use Documents", "pv":"Have Conversations", "val":-30},
-          { "nv":"Code Reviews", "pv":"Pairing","val":-30},
-          { "nv":"Test at End", "pv":"Test all the time", "val":-30},
-          { "nv":"Log Bugs", "pv":"Fix bugs", "val":-30},
-          { "nv":"Keep Busy", "pv":"Reflect", "val":-30}]' >
+          { "nv":"Use Documents", "pv":"Listen", "val":-30},
+          { "nv":"Keep Busy", "pv":"Time to Reflect","val":-30},
+          { "nv":"Test at End", "pv":"Always Testing", "val":-30},
+          { "nv":"Meetings", "pv":"Spontaneous Dialogue", "val":-30}]'>
         </svg>
       </section>
-      <section>
-        <h1><img src="images/dilemmas.png" /></h1>
-      </section>
-      <section>
-        <h2>Many Developers Just Want To Code</h2>
-        <h3>But...</h3>
-        <h2> Effectiveness Requires Collaboration</h2>
-       </section>
-      <section>
-        <h3>Here's What Worked For Us</h3>
-        <img src="images/codecollab.png" style="height:500px"/>
-       </section>
-       <section>
-         <h3>Some People Wanted To Move To Their Country Residence</h3>
-         <img src="images/cowley.jpg" style="height:500px"/>
-      </section>
-      <section>
-        <h3>Here's What Worked For Us</h3>
-        <img src="images/WorkRemotely.png" style="height:500px"/>
-       </section>
-      <section>
-        <h2>So What did I learn?</h2>
-       </section>
-      <section>
-        <h3> I Noticed Most Improvement Came From Learning Faster Through</h3>
-        <h1><img src="images/dialogue.png" /></h1>
-      </section>
+
       <section>
         <h2> People Instinctively Feel Ineffectiveness</h2>
         <h3> They Signal It With Frustration And Dispondency</h3>
       </section>
+
       <section>
         <h2>Fear Is The Improvement Killer</h2>
         <h3>People Signal It With Blame And Untrue Limiting Assumptions</h3>
       </section>
+
       <section>
         <h3>Anti-Matter Principle</h3>
         <blockquote cite="http://flowchainsensei.wordpress.com/category/antimatter-principle/">Attend to Folks' Needs</blockquote>
         <p>Bob Marshall (@flowchansensei)</p>
       </section>
+
       <section>
-        <h3>I have learnt to listen for these signals and bring people together to decide how to </h3>
-        <h2>Act</h2>
+        <h2>Present a good team with problems & they'll thrive on finding solutions. Ask them to implement your solution & they'll only find problems.</h2> 
       </section>
+
       <section>
-        <h1><img src="images/So.png" /></h1>
-        <h2>What Could You Do With 10 Years Of Continuous Improvement?</h2>
+        <h2>Expose your dev team to the chaos of the outside world and ask them to find opportunities in the diversity</h2>
+      </section>    
+
+      <section>
+      <h2>More?</h2>
+      <img alt="Book" style='float:left'  src="images/cover.jpeg">
+      <img alt="Book" style='float:right;background-color:white;padding:10px;'  src="images/LeanTomatologo.png">
+      </section>    
     </div>
   </div>
   <script src="js/jquery.min.js"></script>
